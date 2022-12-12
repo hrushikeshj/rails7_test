@@ -1,0 +1,11 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @user %>
+
+<div>
+  <%= link_to "Edit this user", edit_user_path(@user) %> |
+  <%= link_to "Back to users", users_path %>
+
+  <%= link_to "Back to users", @user, method: :delete %>
+  <%= button_to "Destroy this user", @user, method: :delete, form: { data: { turbo_confirm: 'Are you sure?' } } %>
+</div>
